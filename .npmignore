@@ -1,0 +1,40 @@
+# git
+.git/
+.gitignore
+
+# github/gitlab ci/cd
+.github/
+.gitlab-ci.yml
+
+# IDE
+.idea/
+.vscode
+
+# npm
+node_modules/
+npm-shrinkwrap.json
+.npm-cache/
+npm-debug.log
+
+# docker
+.docker/
+.dockerignore
+docker-compose.yml
+
+# package sources (everything package relevant will be in dist/)
+src/
+tests/
+cli/
+
+# generated
+coverage/
+
+# dev configs
+.eslintignore
+.eslintrc.js
+.prettierignore
+jest.node.config.js
+package-lock.json
+prettier.config.js
+rollup.config.js
+tsconfig.json

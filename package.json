@@ -1,0 +1,49 @@
+{
+  "name": "ts-rollup-binlib",
+  "version": "0.0.1",
+  "description": "TypeScript Rollup Binary/Library NPM Package Template",
+  "bin": {
+    "resulting-binary-name": "dist/bin/bin.js"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "check:types": "tsc --noEmit",
+    "check:formatting:ci:github": "prettier --check \".github/**/*.yml\"",
+    "check:formatting:src": "prettier --check \"src/**/*.{js,ts,json,md}\"",
+    "check:formatting:cli": "prettier --check \"cli/**/*.{js,ts,json,md}\"",
+    "check:formatting": "npm run check:formatting:src && npm run check:formatting:cli && npm run check:formatting:ci:github",
+    "check": "npm run check:formatting && npm run check:types",
+    "build:types": "tsc 'src/index.ts' --outDir dist/types/ --declaration --emitDeclarationOnly",
+    "build:types:clean": "rimraf dist/types/",
+    "build:js": "rollup -c",
+    "build:js:clean": "rimraf dist/cjs dist/bin dist/esm",
+    "build": "npm run build:clean && npm run build:types && npm run build:js",
+    "build:clean": "npm run build:js:clean && npm run build:types:clean",
+    "lint:cli": "eslint cli --ext .js,.ts",
+    "lint:src": "eslint src --ext .js,.ts",
+    "lint:tests": "eslint tests --ext .js,.ts",
+    "lint": "npm run lint:src && npm run lint:cli && npm run lint:tests",
+    "coverage": "jest --config=jest.node.config.js --coverage",
+    "test": "jest --config=jest.node.config.js"
+  },
+  "author": "makadev <npm@makadev.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "8.3.0",
+    "@types/jest": "27.0.2",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-jest": "24.7.0",
+    "eslint-plugin-prettier": "3.4.1",
+    "jest": "27.3.1",
+    "prettier": "2.4.1",
+    "rimraf": "3.0.2",
+    "rollup": "2.60.0",
+    "ts-jest": "27.0.7",
+    "typescript": "4.4.4"
+  }
+}
