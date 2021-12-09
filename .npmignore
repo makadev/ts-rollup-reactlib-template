@@ -32,7 +32,7 @@ coverage/
 .eslintignore
 .eslintrc.js
 .prettierignore
-jest.node.config.js
+jest.jsdom.config.js
 package-lock.json
 prettier.config.js
 rollup.config.js
