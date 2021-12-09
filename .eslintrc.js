@@ -16,6 +16,11 @@ module.exports = {
         "plugin:react-hooks/recommended",
         "plugin:react/jsx-runtime",
     ],
+    settings: {
+        react: {
+            version: "detect",
+        },
+    },
     rules: {
         // disable error on explicit types where type could be inferred
         "@typescript-eslint/no-inferrable-types": 0,
