@@ -1,10 +1,8 @@
 import typescript from "@rollup/plugin-typescript";
 
-const external = ["fs", "path"];
+const external = ["fs", "path", "react", "react-dom", "react/jsx-runtime"];
 
-const cliExcludes = ["tests/**", "{cli,src}/**/*.{spec,test}.{ts,js}", "{cli,src}/**/__test__/*.{ts,js}"];
-
-const libraryExcludes = [...cliExcludes, "cli/**"];
+const libraryExcludes = ["tests/**", "src/**/*.{spec,test}.{ts,js,tsx,jsx}", "src/**/__test__/*.{ts,js,tsx,jsx}"];
 
 // ES5 CommonJS Library Part
 const libraryCJSBuild = {
@@ -54,28 +52,4 @@ const libraryESMBuild = {
     ],
 };
 
-// CLI (ES5 CommonJS)
-const cliCJSBuild = {
-    input: "./cli/main.ts",
-    external,
-    plugins: [
-        typescript({
-            declaration: false,
-            exclude: cliExcludes,
-            rootDirs: ["src/", "cli/"],
-            outDir: "dist/cli",
-            target: "es5",
-        }),
-    ],
-
-    output: [
-        {
-            banner: "#!/usr/bin/env node",
-            file: "dist/bin/bin.js",
-            format: "cjs",
-            exports: "default",
-        },
-    ],
-};
-
-export default [libraryCJSBuild, libraryESMBuild, cliCJSBuild];
+export default [libraryCJSBuild, libraryESMBuild];

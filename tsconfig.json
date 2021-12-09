@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
+        "jsx": "react-jsx" /* Specify what JSX code is generated. */,
         "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
         "declaration": true /* Generates corresponding '.d.ts' file. */,
         "outDir": "dist" /* Redirect output structure to the directory. */,
@@ -11,5 +12,5 @@
         "skipLibCheck": true /* Skip type checking of declaration files. */,
         "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
     },
-    "exclude": ["node_modules", "{cli,src}/**/*.{spec,test}.{ts,js}", "{cli,src}/**/__test__/*.{ts,js}"]
+    "exclude": ["node_modules", "src/**/*.{spec,test}.{ts,js,tsx,jsx}", "src/**/__test__/*.{ts,js,tsx,jsx}"]
 }

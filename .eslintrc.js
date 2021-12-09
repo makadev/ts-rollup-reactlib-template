@@ -6,7 +6,16 @@ module.exports = {
         node: true,
     },
     plugins: ["@typescript-eslint"],
-    extends: ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:prettier/recommended", "plugin:jest/recommended"],
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:jest/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/jsx-runtime",
+    ],
     rules: {
         // disable error on explicit types where type could be inferred
         "@typescript-eslint/no-inferrable-types": 0,

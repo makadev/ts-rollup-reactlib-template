@@ -24,7 +24,6 @@ docker-compose.yml
 # package sources (everything package relevant will be in dist/)
 src/
 tests/
-cli/
 
 # generated
 coverage/
