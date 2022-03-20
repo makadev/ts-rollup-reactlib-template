@@ -11,3 +11,14 @@ services:
         volumes:
             - ".:/app"
         command: /bin/bash
+    storybook:
+        build:
+            context: ./.docker/local
+            dockerfile: Dockerfile
+        expose:
+            - 6006
+        ports:
+            - "6006:6006"
+        volumes:
+            - ".:/app"
+        command: npm run storybook

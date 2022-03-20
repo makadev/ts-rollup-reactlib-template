@@ -10,7 +10,9 @@ describe("Button", () => {
                 onClick={() => {
                     return;
                 }}
-            />
+            >
+                test
+            </Button>
         );
 
         expect(screen.getByText("test")).toBeInTheDocument();

@@ -19,7 +19,4 @@ VOLUME /app
 ## Set Default Workdir
 WORKDIR /app
 
-## Default Port if there is something to map
-EXPOSE 3000
-
 CMD /bin/bash

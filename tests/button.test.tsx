@@ -6,6 +6,7 @@ it("Button renders correctly", () => {
         onClick: () => {
             return;
         },
+        children: "test",
     };
     const tree = renderer.create(<Button {...props} />).toJSON();
     expect(tree).toMatchSnapshot();

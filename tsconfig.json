@@ -12,5 +12,5 @@
         "skipLibCheck": true /* Skip type checking of declaration files. */,
         "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
     },
-    "exclude": ["node_modules", "src/**/*.{spec,test}.{ts,js,tsx,jsx}", "src/**/__test__/*.{ts,js,tsx,jsx}"]
+    "exclude": ["node_modules", "tests/stories/**/*", "src/stories/**/*", "src/**/*.{spec,test}.{ts,js,tsx,jsx}", "src/**/__test__/*.{ts,js,tsx,jsx}"]
 }

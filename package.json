@@ -21,12 +21,23 @@
     "lint:tests": "eslint tests --ext .js,.ts,.jsx,.tsx",
     "lint": "npm run lint:src && npm run lint:tests",
     "coverage": "jest --config=jest.jsdom.config.js --coverage",
-    "test": "jest --config=jest.jsdom.config.js"
+    "test": "jest --config=jest.jsdom.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "makadev <npm@makadev.de>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "7.17.8",
     "@rollup/plugin-typescript": "8.3.0",
+    "@storybook/addon-actions": "6.4.19",
+    "@storybook/addon-essentials": "6.4.19",
+    "@storybook/addon-interactions": "6.4.19",
+    "@storybook/addon-links": "6.4.19",
+    "@storybook/builder-webpack5": "6.4.19",
+    "@storybook/manager-webpack5": "6.4.19",
+    "@storybook/react": "6.4.19",
+    "@storybook/testing-library": "0.0.9",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
     "@types/jest": "27.0.2",
@@ -34,12 +45,14 @@
     "@types/react-test-renderer": "17.0.1",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
+    "babel-loader": "8.2.3",
     "eslint": "7.32.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-jest": "24.7.0",
     "eslint-plugin-prettier": "3.4.1",
     "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "0.5.7",
     "jest": "27.3.1",
     "prettier": "2.4.1",
     "react": "17.0.2",
@@ -48,7 +61,8 @@
     "rimraf": "3.0.2",
     "rollup": "2.60.0",
     "ts-jest": "27.0.7",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "webpack": "5.70.0"
   },
   "peerDependencies": {
     "react": ">=17"
